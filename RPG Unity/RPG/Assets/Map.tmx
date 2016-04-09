@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="10" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="grass" tilewidth="32" tileheight="32" tilecount="18" columns="3">
+  <image source="../../../../../../Downloads/LPC Base Assets/grass.png" width="96" height="192"/>
+ </tileset>
+ <tileset firstgid="19" name="castlefloors" tilewidth="32" tileheight="32" tilecount="100" columns="10">
+  <image source="../../../../../../Downloads/LPC Base Assets/castlefloors.png" width="320" height="320"/>
+ </tileset>
+ <tileset firstgid="119" name="rock" tilewidth="32" tileheight="32" tilecount="2" columns="2">
+  <image source="../../../../../../Downloads/LPC Base Assets/rock.png" width="64" height="32"/>
+ </tileset>
+ <tileset firstgid="121" name="red" tilewidth="16" tileheight="16" tilecount="1" columns="1">
+  <image source="../../../../../../Downloads/LPC Base Assets/red.png" width="25" height="25"/>
+  <tile id="0">
+   <objectgroup draworder="index">
+    <object id="0" x="-0.03125" y="0" width="16" height="15.9688"/>
+   </objectgroup>
+  </tile>
+ </tileset>
+ <layer name="Floor" width="20" height="10">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+41,0,20,0,31,31,31,31,31,31,31,31,31,31,31,0,32,0,41,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+30,0,63,0,41,41,41,41,41,41,41,41,41,41,41,0,59,0,31,0,
+40,0,0,0,41,41,41,41,41,41,41,41,41,41,0,41,0,0,0,0,
+50,0,23,0,41,41,41,41,41,41,41,41,41,41,41,41,19,0,51,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+41,0,60,0,51,51,51,51,51,51,51,51,51,51,51,0,52,0,41,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="Collisions" width="20" height="10" opacity="0.3">
+  <data encoding="csv">
+121,121,121,121,121,121,121,121,121,121,121,121,121,121,121,121,121,121,121,121,
+121,121,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,121,121,
+121,121,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,121,121,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+121,121,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,121,121,
+121,121,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,121,121,
+121,121,121,121,121,121,121,121,121,121,121,121,121,121,121,121,121,121,121,121
+</data>
+ </layer>
+</map>
