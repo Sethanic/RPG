@@ -19,8 +19,10 @@ public class Inventory : MonoBehaviour {
             slots.Add(new Items());
         }
         database = GameObject.FindGameObjectWithTag("Item Database").GetComponent<ItemDatabase>();
-        inventory.Add(database.items[0]);
         inventory.Add(database.items[1]);
+        print(InventoryContains(1));
+        RemoveItem(1);
+        print(InventoryContains(1));
 	}
 
     void Update ()
@@ -43,11 +45,32 @@ public class Inventory : MonoBehaviour {
     {
         for (int x  = 0; x < slotsX; x++)
         {
-            for (int y = 0; x < slotsY; y++)
+            for (int y = 0; y < slotsY; y++)
             {
-                GUI.Box(new Rect(x *  20, y * 20, 20, 20), y.ToString());
+                GUI.Box(new Rect(x *  50, y * 50, 40, 40), y.ToString());
             }
         }
 
+    }
+
+    void RemoveItem(int id)
+    {
+        for(int i = 0; i < inventory.Count; i++)
+        {
+            if (inventory[i].itemID ==id)
+            {
+                inventory[i] = new Items();
+                break;
+            }
+        }
+    }
+
+    bool InventoryContains(int id)
+    {
+        foreach (Items item in inventory)
+        {
+            if (item.itemID == id) return true;
+        }
+        return false;
     }
 }
